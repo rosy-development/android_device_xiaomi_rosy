@@ -68,6 +68,9 @@ PRODUCT_PACKAGES += \
     libantradio
 
 # Audio
+AUDIO_SDK_FLUENCETYPE := fluence
+$(call inherit-product, hardware/qcom/audio/configs/msm8953/msm8953.mk)
+
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.primary.msm8953 \

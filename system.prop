@@ -209,3 +209,5 @@ ro.vendor.qti.am.reschedule_service=true
 ro.vendor.qti.sys.fw.bservice_enable=true
 ro.vendor.qti.va_aosp.support=1
 
+# Force wifi interface for wlan0
+wifi.interface=wlan0

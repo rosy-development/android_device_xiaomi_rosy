@@ -226,6 +226,9 @@ on post-fs-data
     # Create directory used for dump collection
     mkdir /data/vendor/ssrdump 0770 root system
 
+    #Create IOP  deamon related dirs
+    mkdir /data/vendor/iop 0700 root system
+
     # Create directory used by display clients
     mkdir /data/vendor/display 0770 system graphics
 
@@ -439,6 +442,13 @@ service vendor.rmt_storage /vendor/bin/rmt_storage
     shutdown critical
     ioprio rt 0
     writepid /dev/cpuset/system-background/tasks
+
+service iop /system/vendor/bin/iop
+    class main
+    user root
+    group root
+    disabled
+    socket iop seqpacket 0666 root system
 
 service vendor.tftp_server /vendor/bin/tftp_server
    class core

@@ -3,7 +3,7 @@ allow init hidl_base_hwservice:hwservice_manager add;
 allow init hwservicemanager:binder { call transfer };
 allow init proc_boot_reason:file r_file_perms;
 allow init sysfs:file setattr;
-allow init sysfs_sensors:file setattr;
+allow init vendor_sysfs_sensors:file setattr;
 allow init system_server:binder { call transfer };
 allow init vendor_file:file { execute };
 allow init proc:file setattr;
